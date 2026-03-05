@@ -1,3 +1,22 @@
+<style>
+.review-rating__block {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 1.2rem;
+}
+.review-rating__block .star-rating {
+  color: var(--star-color);
+}
+.review-rating__block .star-rating__star {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: rgba(0, 0, 0, 0.12);
+}
+</style>
+
 <div class="review-rating__block">
   {% render 'rating',
     rating: block.settings.rating,
