@@ -53,3 +53,33 @@
     </svg>
   {% endfor %}
 </div>
+
+# Schena option
+{
+  "type": "review-rating",
+  "name": "Review rating",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "range",
+      "id": "rating",
+      "label": "Rating",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 4.8
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#0B61CD"
+    },
+    {
+      "type": "text",
+      "id": "review_text",
+      "label": "Review Text",
+      "default": "from 1,200+ reviews"
+    }
+  ]
+},
