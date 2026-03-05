@@ -1,0 +1,31 @@
+#----- Image with img tag -----#
+{{
+  section.settings.image
+  | image_url: {{ section.settings.image.width }}
+  | image_tag:
+    loading: 'lazy',
+    fetchpriority: 'low',
+    class: 'media-img',
+    widths: '410, 600, 820',
+    is: 'image-lazy'
+}}
+
+
+#----- visible_if condition -----#
+{%- if block.settings.show_extra_content and block.settings.overlay_text != blank -%}
+ // Add code here
+{%- endif -%}
+
+{
+  "type": "checkbox",
+  "id": "show_extra_content",
+  "label": "Show overlay info",
+  "default": true,
+},
+{
+  "type": "richtext",
+  "id": "overlay_text",
+  "label": "Overlay text",
+  "default": "<p>Add overlay information here</p>",
+  "visible_if": "{{ block.settings.show_extra_content == true }}"
+},
